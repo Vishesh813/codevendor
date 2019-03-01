@@ -1,0 +1,159 @@
+  <html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="img/logo.png">
+    <title>Codevendor|Inhance your learning</title>
+
+    <!-- Bootstrap -->
+    <link href="component/css/bootstrap.css" rel="stylesheet">
+    <link href="component/css/mainstyle.css" rel="stylesheet">
+    <link href="component/css/font-awesome.min.css" rel="stylesheet">
+    <link href="component/css/font-awesome.css" rel="stylesheet">
+    
+<style>
+ #center {
+    width: 500px;
+    margin-left: 500px;
+   }
+    #p1
+{ 
+     font-family: "calibri";  
+	 color: #00cccc;
+	 background:black;
+	 font-size:large;
+} 
+ </style>
+</head>
+<body style="height:1100px;">
+<div id="p1">
+</div>
+<h3 align="center" style="color: #00ff00;background:black;">Program</h3>
+<div id="center">
+          <button type="button"style="color: #00ff00;background:black;" >try yourself</button>
+        </div>
+<pre>
+<xmp id="p1">
+
+import java.awt.*;
+import java.awt.event.*;
+import java.applet.*;
+/*<applet  code="Calculator1" width=300 height=300></applet>*/
+public class Calculator1 extends Applet implements ActionListener
+{
+            TextField t;    
+            Button b[]=new Button[15];
+            Button b1[]=new Button[6];
+            String op2[]={"+","-","*","%","=","C"};
+            String str1="";
+            int p=0,q=0;
+            String oper;
+            public void init()
+            {
+                        setLayout(new GridLayout(5,4));
+                        t=new TextField(20);
+                        setBackground(Color.pink);
+                        setFont(new Font("Arial",Font.BOLD,20));
+                        int k=0;
+                        t.setEditable(false);
+                        t.setBackground(Color.white);                      
+                        t.setText("0");
+                        for(int i=0;i<10;i++)
+                        {
+                                    b[i]=new Button(""+k);
+                                    add(b[i]);
+                                    k++;
+                                    b[i].setBackground(Color.pink);
+                                    b[i].addActionListener(this);
+                        }
+                       
+                        for(int i=0;i<6;i++)
+                        {
+                                    b1[i]=new Button(""+op2[i]);
+                                    add(b1[i]);
+                                    b1[i].setBackground(Color.pink);
+                                    b1[i].addActionListener(this);
+                        }
+                        add(t);            
+            }
+            public void actionPerformed(ActionEvent ae)
+            {
+                       
+                        String  str=ae.getActionCommand();
+                       
+                        if(str.equals("+")){      p=Integer.parseInt(t.getText());                                                 
+                                                            oper=str;                                                  
+                                                            t.setText(str1="");      
+                                                   }
+                        else if(str.equals("-")){  p=Integer.parseInt(t.getText());
+                                                              oper=str;                                                         
+                                                              t.setText(str1="");    
+                                                            }                                 
+                        else if(str.equals("*")){  p=Integer.parseInt(t.getText());
+                                                               oper=str;                                                    
+                                                              t.setText(str1="");
+                                                            }
+                        else if(str.equals("%")){  p=Integer.parseInt(t.getText());
+                                                                oper=str;                                                                                                                                                               
+                                                               t.setText(str1="");
+                                                        }                                     
+                        else if(str.equals("=")) { str1="";                                                        
+                                                               if(oper.equals("+"))  {
+                                                               q=Integer.parseInt(t.getText());
+                                                               t.setText(String.valueOf((p+q)));}
+
+                                                               else if(oper.equals("-")) {
+                                                               q=Integer.parseInt(t.getText());
+                                                               t.setText(String.valueOf((p-q))); }
+
+                                                               else  if(oper.equals("*")){
+                                                               q=Integer.parseInt(t.getText());
+                                                               t.setText(String.valueOf((p*q))); }
+
+                                                               else if(oper.equals("%")){
+                                                               q=Integer.parseInt(t.getText());
+                                                               t.setText(String.valueOf((p%q))); }
+                                                        }
+
+                        else if(str.equals("C")){  p=0;q=0;
+                                                               t.setText("");
+                                                               str1="";                                                           
+                                                               t.setText("0");
+                                                            }
+
+                       
+
+else{  t.setText(str1.concat(str));
+                                           str1=t.getText(); 
+                                        }
+                                                           
+                             }                            
+           
+}
+--------------------------------------------------------------------------------------------------------------
+OUTPUT:
+</xmp>
+</pre>
+<img src="img/cal1.png" width="50%" height="50%">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="component/js/bootstrap.min.js"></script>
+    <script src="component/js/jquery-3.2.1.js"></script>
+    <script>
+        //   $('#myCarousel').on("slide.bs.carousel", function(){
+        //     $(".carousel-control",this).css('top',($(".active img",this).height()*0.46)+'px');
+        //     $(this).off("slide.bs.carousel");
+        //});
+    </script>
+
+
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+</body>
+</html>

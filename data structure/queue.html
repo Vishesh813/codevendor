@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Codevendor &mdash; Inhance your learning</title>
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+<style>
+.button1 {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    margin-left: 40%;
+}
+pre {
+    color: blue;
+	text-align: justify;
+	font-family: 'Noto Serif', serif;
+	//valign:top;
+	//margin-left: 20px;
+	padding-left:20px;
+	word-spacing:5px;
+}
+#p1 {
+    display: block;
+    margin-top:;
+    margin-bottom:;
+    //margin-left: 20px;
+    margin-right: 0;
+	word-spacing:5px;
+	font-family: 'Noto Serif', serif;
+}
+h1 {
+    color: green;
+}
+#p2 {
+    color:blue;
+   // padding-left:20px;
+   // margin-left: 20px
+    height: auto;
+    max-height: 600px;
+    overflow: auto;
+	border-color:blue;
+    //background-color: #eeeeee;
+    word-break: normal !important;
+    word-wrap: normal !important;
+    white-space: pre !important;
+	word-spacing:5px;
+	font-family: 'Noto Serif', serif;
+}​
+#margi{
+      margin-right: 10%;
+ }
+</style>
+</head>
+<body >
+    <div style="margin-right: 10%;">
+		   <h3 align="center" valign="top">Queue</h3>
+		   <div id="p1">
+  <p> 
+  Queue is work on the principal of First-In-First-Out (FIFO), it means first entered item remove first. Queue have two end front and rear, from front you can insert element and from rear you can delete element.
+	 </p>
+	    <h3>Real life example of queue</h3>
+		<img src="component/img/queue2.png" style="padding-left:150px">
+		<p>
+A common example of queue is movie theater ticket counter, there first person who stand in front of ticket window take ticket first and remove from line and new person always stand in line from end.	
+	
+	 
+	  </p>
+	 <h3>Application of Queue Data Structure in C</h3>
+<p>Queues are used for any situation where you want to efficiently maintain a First-in-first out order on some entities. Transport and operations research where various entities are stored and held to be processed later i.e the queue performs the function of a buffer.
+
+In a multitasking operating system, the CPU cannot run all jobs at once, so jobs must be batched up and then scheduled according to some policy. Again, a queue might be a suitable option in this case.
+	</p>
+	<h3>Queue Operation</h3>
+	 <p>
+The basic operation that can be perform on queue are;
+
+<h5>Insert an element in a queue.:</h5> 
+<h5>Delete any element from the queue.:</h5> 
+	 </p>
+	  </div>
+	 <div id="p1">
+	 <h3 align="center"> Insert an element in a queue.</h3>
+   <img src="component/img/q1.gif" style="padding-left:150px">
+	 <p>
+   
+In queue insert any element form Rear. If you insert new element in queue value of Rear will be increased by 1.
+	 </p>
+	 <h3 align="center"> Insert an element in a queue.</h3>
+		   <pre style="border-style: solid;">
+void insert()
+{
+int item;
+printf("Element : ");
+scanf("%d",&item);
+if(front==(rear+1)%3)
+{
+printf("Queue is Full");
+return;
+}
+if(front==-1)
+{
+rear=front=0;
+}
+else
+{
+rear=(rear+1)%3;
+}
+cque.cqueue[rear]=item;
+printf("Successfully Insert");
+}
+		   </pre>
+	 
+	 </div>
+	<button class="button1"><a href="web/arrayqueue.html">Live View</a></button>
+	 
+      <div id="p1">
+	  <h3 align="center"> Delete any element from the queue.</h3>
+   <img src="component/img/q2.gif" style="padding-left:150px">
+	 <p>
+   
+In queue delete an element form Front. If you delete an element from queue value of Front will be increased by 1.
+	 </p>
+	 
+	 </div>
+		   
+		    <h3 align="center"> Delete any element from the queue.</h3>
+		   <pre style="border-style: solid;">
+		   void del()
+ {
+ int num;
+ if(front==-1)
+ {
+ printf("Queue Empty");
+ return;
+ }
+ else
+ {
+ num=cque.cqueue[front];
+ printf("Deleted item : %d",num);
+ }
+ if(front==rear)
+ {
+ front=-1;
+ }
+ else
+ front=(front+1)%3;
+ }</pre>
+<button class="button1"><a href="web/arrayqueue.html">Live View</a></button>
+
+ <h3 align="center">Example of queue.</h3>
+ <div id="p2"?
+ <pre style="border-style: solid;">
+ #include<stdio.h>
+ #include<conio.h>
+
+ void insert();
+ void del();
+ void display();
+
+ struct circ
+ {
+ int cqueue[5];
+ };
+
+ struct  circ cque;
+ int rear=0,front=-1;
+
+ void main()
+ {
+ while(1)
+ {
+ int num;
+ clrscr();
+ printf("1.Insertion\n2.Deletion\n3.Display\n0.Exit\n");
+ printf("\n\nSelect Option : ");
+ scanf("%d",&num);
+ switch(num)
+ {
+ case 1:
+ insert();
+ break;
+ case 2:
+ del();
+ break;
+ case 3:
+ display();
+ break;
+ case 0:
+ exit(0);
+ break;
+ default:
+ printf("\n\n Invalid Option ");
+ }
+ getch();
+ }
+ }
+ 
+ void insert()
+ { 
+ int item;
+ printf("Element : ");
+ scanf("%d",&item);
+ if(front==(rear+1)%3)
+ {
+ printf("Queue is Full");
+ return;
+ }
+ if(front==-1)
+ {
+ rear=front=0;
+ }
+ else
+ {
+ rear=(rear+1)%3;
+ }
+ cque.cqueue[rear]=item;
+ printf("Successfully Insert");
+ }
+
+ void del()
+ {
+ int num;
+ if(front==-1)
+ {
+ printf("Queue Empty");
+ return;
+ }
+ else
+ {
+ num=cque.cqueue[front];
+ printf("Deleted item : %d",num);
+ }
+ if(front==rear)
+ {
+ front=-1;
+ }
+
+ else
+ front=(front+1)%3;
+ }
+ 
+ void display()
+ {
+ int i;
+ if(front==-1)
+ {
+ printf("Queue Empty");
+ return;
+ }
+ else
+ {
+ printf("\n\nItems : ");
+ for(i=front;i<=rear;i++)
+ {
+ printf("   %d",cque.cqueue[i]);
+ }
+ }
+ }</pre>
+
+</div>
+<br>
+<br></div>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="component/css/php.css" rel="stylesheet">
+	
+<title>Codevendor &mdash; Inhance your learning</title>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif');
+</style>
+</head>
+<body >
+	<div class="main">
+		   <h3 align="center" valign="top">PHP Constants</h3>
+  <p> 
+A constant is an identifier (name) for a simple value. The value cannot be changed during the script.
+
+A valid constant name starts with a letter or underscore (no $ sign before the constant name).
+
+<h4>Note:</h4> Unlike variables, constants are automatically global across the entire script.
+	 </p>
+	 <h4>Create a PHP Constant</h4>
+	    <p>To create a constant, use the define() function.</p>
+	<div class="block">
+	 <xmp>
+		define(name, value, case-insensitive)
+	 </xmp>
+	</div>
+	<h3>Syntax</h3>
+	<p>
+		Parameters:<br>
+
+name: Specifies the name of the constant<br>
+value: Specifies the value of the constant<br>
+case-insensitive: Specifies whether the constant name should be <br>case-insensitive. Default is false<br>
+The example below creates a constant with a case-sensitive name:
+	</p>
+	<h3>Example</h3>
+			<div class="block">
+			 <xmp>
+				<?php
+				define("GREETING", "Welcome to W3Schools.com!");
+				echo GREETING;
+				?>
+			 </xmp>
+			</div>
+			<h4>Output:</h4>
+			<pre>
+				Welcome to W3Schools.com!</pre>
+				<h3>Constants are Global</h3>
+			<p>Constants are automatically global and can be used across the entire script.
+
+The example below uses a constant inside a function, even if it is defined outside the function:
+             </p>
+			
+			<h4>Example:</h4>
+			<div class="block">
+			 <xmp>
+				<?php
+				define("GREETING", "Welcome to W3Schools.com!");
+
+				function myTest() {
+				    echo GREETING;
+				}
+				 
+				myTest();
+				?>
+			 </xmp>
+			</div>
+			<h4>Output:</h4>
+			<pre>
+				Welcome to W3Schools.com!</pre>
+				
+		</div>
+</body>
+
+</html>

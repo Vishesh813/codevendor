@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+/*font-family: 'Noto Sans', sans-serif;*/
+section{
+
+  padding: 200px 0;
+  color:blue;
+  font-family: 'Orbitron', sans-serif;
+}
+
+
+.img-circle{
+        border-radius:50%;
+        }
+
+
+a:hover{
+    
+    transform: scale(1.2);
+    transition: .2s;
+     font-family: 'Orbitron', sans-serif;
+}
+a{
+    
+     font-family: 'Orbitron', sans-serif;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+
+ .box{
+     padding: 3em 2em 2em 2em;
+    border: 2px solid rgba(13, 103, 121,10);
+    border-radius: 8px;   
+    box-shadow: 27 0 20px 4px black;
+    box-shadow: 0 0 20px 3px black;
+	text-align:center;
+   }
+   
+   
+.box1{
+    padding: 3em 2em 2em 3em;
+    border: 2px solid rgba(13, 103, 121,10);
+    border-radius: 8px;
+    box-shadow: 27 0 20px 4px black;
+    box-shadow: 0 0 20px 3px black;
+	color:aqua;
+	
+}
+
+.box3{
+    padding: 0 2em 1em 2em;
+    margin-top:30px;
+    margin-bottom:30px;
+    margin-right:70px;
+    margin-left:70px;
+}
+
+.box2{
+    padding: 0 2em 1em 2em;
+    margin-top:30px;
+    margin-bottom:30px;
+    margin-right:70px;
+    margin-left:70px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.box4{
+     padding: 3em 2em 2em 2em;
+    border: 2px solid rgba(13, 103, 121,10);
+    border-radius: 8px;      
+	 font-family: 'Orbitron', sans-serif;
+   }
+   
+ .box5{
+     padding: 3em 2em 2em 2em;
+    border: 2px solid rgba(13, 103, 121,10);
+    border-radius: 8px;   
+    box-shadow: 27 0 20px 4px black;
+    box-shadow: 0 0 20px 3px black;
+	text-align:center;
+   }   
+   
+ .box5:hover{ 
+      opacity:.3;
+ 
+   }
+   
+   .abt{
+      margin-left:0%;
+	  margin-right:30%
+   }
+   
+   .abt2{
+	   font-size:120%;
+   }
+   
+.tech{
+  border-bottom: 5px solid #c52d2f;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    color: #fff;
+    background: #2e2e2e;
+    box-shadow: 0 0 2px 6px black;
+}
+
+#section1
+{
+     background:url('../1.jpg') center center fixed;
+     padding-top:
+     width:100%;
+	
+}
+
+#section3
+{
+     background:url('../1.jpg') center center fixed;
+     padding-top:10%;
+     width:100%;
+	
+}
+
+#logo
+{
+font-size:40px;
+
+}
+
+  .item img {
+    width: 100%;
+    height: auto;
+  }
+        
+        #x1 {
+           
+            padding-top:3%;
+            
+        }
+        ul li ul.dropdown {
+            min-width: 100%;
+            background: sky blue;
+            display: none;
+            position: absolute;
+            z-index: 999;
+            left: 0;
+        }
+
+        ul li:hover ul.dropdown {
+            display: block;
+        }
+
+        ul li ul.dropdown li {
+            display: block;
+        }
+		
+	.img1{
+	     text-align:center;
+	     width:10px;
+		 height:50px;
+	     }
+	
+    .text{      	
+	  margin-left:40%;
+	  margin-top:0%;
+	  text-align:justify;
+	}	
+    /*   footer      */ 
+   
+   .text2{
+      margin-left:16%;
+   }
+   .text4{
+      margin-right:16%;
+   }
+   
+   .text3{
+      margin-left:75%;
+	  margin-right:10%;
+   
+      }
+   
+   .logo2{/*
+      margin-left:45%;
+	  margin-right:45%; */
+    padding: 10px;
+
+   }
+   .fimg{
+    border-radius:10%;
+   }
+
+	.v1{
+	font-family: 'Orbitron', sans-serif;
+    margin-left:450px;
+    border-left:3px solid black;
+    height:300px;
+      }
+    .v2{
+    font-family: 'Orbitron', sans-serif;
+    margin-left:450px;
+    border-left:3px solid black;
+    height:300px;
+       }
+    .hr{
+	    margin-left:43%;
+		margin-right:43%;
+		height:2px;
+     	}
+.fpage{
+      width:80%;
+      height:auto;
+      background:grey;
+      border-radius:20px;
+	  padding-right:90px;
+      }
+
+
+h1{
+   font-family: 'Orbitron', sans-serif;
+}
+
+
+      
+   #footer {	
+	 border-bottom: 5px solid #c52d2f;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    color: #fff;
+    background: #2e2e2e;
+    box-shadow: 0 0 2px 6px black;
+	}
+	
+	  .tech{
+                font-family: 'Orbitron', sans-serif;
+  border-bottom: 5px solid #c52d2f;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    color: #fff;
+    background: #2e2e2e;
+    box-shadow: 0 0 2px 6px black;
+}

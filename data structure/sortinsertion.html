@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Codevendor &mdash; Inhance your learning</title>
+<link href="component/css/php.css" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif');
+</style>
+</head>
+<body>
+	<div class="main">
+		   <h3 align="center" valign="top">Insertion Sort Program in C</h3>
+  <p> 
+Insertion Sort is a simplest data Sorting algorithm which sorts the array elements by shifting elements one by one and inserting each element into its proper position. This technique is also used for sort array elements. With the help of below animated image you can easily understand and you can also see real life example in second image.	 </p>
+	 <img src="component/img/insertionsort.gif" align="center">
+	 <h4>Advantage of this sorting technique</h4>
+	 <p>It is a simple data Sorting algorithm. It is also better than Selection Sort and Bubble Sort algorithms.</p>
+	 <h4>Dis-Advantage of this sorting technique</h4>
+	 <p>This sorting technique is slower than quick sort sorting algorithm.</p>
+	 <h4>Insertion Sort Program in C</h4>
+	 <xmp>
+	 	#include<stdio.h>
+		#include<conio.h>
+
+		void main() 
+		{
+		int i, j, num, temp, arr[20];
+		clrscr();
+		printf("Enter size of array: ");
+		scanf("%d", &num);
+
+		printf("Enter %d elements in arry: \n", num);
+		for(i=0; i<num; i++)
+		{
+		scanf("%d", &arr[i]);
+		}
+
+		for(i=1; i<num; i++)
+		{
+		temp=arr[i];
+		j=i-1;
+		while((temp<arr[j])&&(j>=0))
+		{
+		arr[j+1]=arr[j];
+		j=j-1;
+		}
+		arr[j+1]=temp;
+		}
+
+		printf("After Sorting elements: ");
+		for(i=0; i<num; i++)
+		{
+		printf("%d  ", arr[i]);
+		}
+		getch();
+		}
+    </xmp>
+	
+	<button class="button1"><a href="web/insertion.html">Live View</a></button>
+	
+    <h4>Output</h4>
+    <pre>
+    	Enter size of array: 8
+		Enter 8 elements in arry
+		3
+		6
+		2
+		1
+		4
+		7
+		5
+		8
+		After Sorting elements: 1  2  3  4  5  6  7  8
+    </pre>
+
+	</div>
+</body>
+
+</html>

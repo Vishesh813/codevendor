@@ -1,0 +1,93 @@
+  <html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="img/logo.png">
+    <title>Codevendor|Inhance your learning</title>
+
+    <!-- Bootstrap -->
+    <link href="component/css/bootstrap.css" rel="stylesheet">
+    <link href="component/css/mainstyle.css" rel="stylesheet">
+    <link href="component/css/font-awesome.min.css" rel="stylesheet">
+    <link href="component/css/font-awesome.css" rel="stylesheet">
+    
+<style>
+    #p1
+{ 
+     font-family: "calibri";  
+	 color: #00cccc;
+	 background:black;
+	 font-size:large;
+} 
+ #center {
+    width: 500px;
+    margin-left: 500px;
+   }
+ </style>
+</head>
+<body style="height:1100px;">
+<div id="p1">
+</div>
+<h3 align="center" style="color: #00ff00;background:black;">Program</h3>
+<div id="center">
+ <button type="button"style="color: #00ff00;background:black;" >try yourself</button>
+</div>
+<pre>
+<xmp id="p1">
+
+ class A
+ {
+	 void area(int z)
+	 {
+		 System.out.println("area of sruare is " + z*z);
+	 }
+	 void area(int l,int k)
+	 {
+		 System.out.println("area of ractangle is " + l*k);
+	 }
+	 void area(int a,int b,int c)
+	 {    
+	      int s,y;
+		  s=(a+b+c)/2;
+		  y=(s*(s-a)*(s-b)*(s-c));
+	System.out.println("area of tringle is " + Math.sqrt(y));
+	 }
+ }
+ class area{
+     public static void main(String[] args)
+	 { 
+		 A ob=new A();
+		 ob.area(10);
+		 ob.area(29,30);
+		 ob.area(10,10,2);
+	 }
+   }
+------------------------------------------------------------------------
+OUTPUT:
+area of square is  100
+area of ractangle is  870
+area of tringle is  9.9498743710662
+</xmp>
+</pre>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="component/js/bootstrap.min.js"></script>
+    <script src="component/js/jquery-3.2.1.js"></script>
+    <script>
+        //   $('#myCarousel').on("slide.bs.carousel", function(){
+        //     $(".carousel-control",this).css('top',($(".active img",this).height()*0.46)+'px');
+        //     $(this).off("slide.bs.carousel");
+        //});
+    </script>
+
+
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+</body>
+</html>

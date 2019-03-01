@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon" href="component/img/logo0.png">
+    <title>html viewer</title>
+    <meta charset="utf-8">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	
+    <style type="text/css">
+        .innerbox {
+
+            width: 50%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            float: left;
+            min-height: 300px;
+        }
+
+        .preview {
+            width: 100%;
+
+
+        }
+
+        iframe {
+
+            border: none;
+            width: 100%;
+            height: 100%
+			background:white;
+        }
+
+
+        .innerbox.html{
+
+           background-color: rgba(0, 188, 212, 0.77);
+    font-size: 20px;
+    font-family: fantasy;
+    color: mintcream;
+        }
+        .innerbox.css{
+       background-color: rgba(103, 58, 183, .5);
+    /* text-shadow: 0 0 19px black; */
+    font-size: 20px;
+    font-family: fantasy;
+    color: #3F51B5;
+    color: mintcream;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function() {
+
+            function gethtml() {
+
+                var html = $('.html').val();
+
+                return html;
+            }
+
+            function getcss() {
+
+                var html = $('.css').val();
+                return html;
+            }
+
+
+            $('.innerbox').live("keyup", function() {
+
+                var targetp = $('#previewtarget')[0].contentWindow.document;
+
+                targetp.open();
+                targetp.close();
+
+                var html = gethtml();
+
+                var css = getcss();
+                $('body', targetp).append(html);
+
+
+                $('head', targetp).append('<style>' + css + '</style>');
+
+
+
+
+            })
+        });
+
+
+                 $('#gets').click(function(){
+
+                      var alertcode = $('#previewtarget').contents().find('html').html();
+                         alert(alertcode);
+                         return false;
+                 });
+
+    
+    </script>
+	
+	 <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	
+	<!-- Bootstrap -->
+
+    <link href="component/css/bootstrap.min.css" rel="stylesheet">
+    <link href="component/css/bootstrap.css" rel="stylesheet">
+
+    <link href="component/css/mainstyle.css" rel="stylesheet">
+    <link href="component/css/htmlviewer.css" rel="stylesheet">
+	
+    <link href="component/css/font-awesome.min.css" rel="stylesheet">
+    <link href="component/css/font-awesome.css" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+      <style>	
+			
+			body {
+				background: #ffffff url(component/img/.jpg) no-repeat center top;				
+				background-size: cover;	      
+                 } 				
+		</style>
+
+</head>
+
+<body>
+
+ <div id="section1">
+        <div class="navbar navbar-inverse navbar-top ">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+                   <a class="navbar-brand wow flip"><img src ="component/img/logo0.png" class="img-circle" class="img-responsive" style="background-color:#cccccc" width="50" height="50"> codevendor</a>
+                </div>
+                      <div class="collapse navbar-collapse" id="myNavbar">
+                     <ul class="nav navbar-nav navbar-right">
+                     <li><a href="home.html">Home</a></li>
+					
+                    
+                    <li><a href="#">Tutorials</a>
+					    <ul class="dropdown">
+						            <div class="fpage">
+                                <table style="float:right;background:gray;border-radius: 10px;" cellpadding="10px">
+                                    <tr>
+                                        <td><a href="data.html"><img class="img-circle" src="component/img/ds.jpg" width="100" height="100"></a></td>
+                                        <td><a href="html.html"><img class="img-circle" src="component/img/HTML.png" width="100" height="100"></a></td>
+                                        <td><a href="css.html"><img class="img-circle" src="component/img/css.jpg" width="100" height="100"></a></td>
+										
+                                    </tr>
+                                    <tr>
+									     <td><a href="oos.html"><img class="img-circle" src="component/img/oss.jpg" width="100" height="100"></a></td>
+   										 <td><a href="php.html"><img class="img-circle" src="component/img/a4.jpg" width="100" height="100"></a></td>
+                                         <td><a href="quiz.html"><img class="img-circle" src="component/img/quiz.jpg" width="100" height="100"></a></td>
+									  </tr> 
+                                </table>
+                            </div>
+						      </ul>		
+                      <li class="active"><a href="htmlviewer.html">HTML live</a></li>							  
+                    <li><a href="enquiry.html">Contact Us </a></li>
+					<li><a href="about.html">About</a></li>
+                    <li><a href="#">Logout</a></li>
+                </div>
+            </div>
+        </nav>
+    </div>
+	
+	
+	
+    <div id="mainWrapper">
+       <h1 align="center"><font color="black"><b>Try HTML live viewer</b></font></h1>
+        <div id="box">
+                  	<h3 align="center"><font color="black">Write HTML & CSS code</font></h3>
+             <textarea class="innerbox html"> </textarea> 
+		
+                   	
+             <textarea class="innerbox css"> </textarea> <br><br><br>
+
+            	<h3 align="center"><font color="black"> Here Your Output</font></h3>
+            
+              <br><br><div class="innerbox preview">
+
+                <iframe id="previewtarget" >
+				
+     		<!DOCTYPE html>
+		
+     		<html>
+     		<head>
+
+     			<meta>
+     		</head>
+     		<body>
+     		
+     		</body>
+     		</html>
+     	       </iframe>
+            </div>
+        </div>
+ </div>
+
+ 
+ <!-- 
+ 
+<div class="footer">      
+	 <h2 align="center"><font color="white"><b>Follow Us </b></font></h2> 
+	  <div class= "logo2">
+	     <img class="fimg" src="component/img/fb.jpg" width="30" height="30">
+		  <a href="http://codevendor9.blogspot.in"><img class="fimg" src="component/img/blog.jpg" width="30" height="30"></a>
+		   <a href="https://www.youtube.com/channel/UCCRy3ob-9u_omSP_aGw82QQ"><img class="fimg" src="component/img/youtube.jpg" width="30" height="30"></a>
+		    <img class="fimg" src="component/img/fb.jpg" width="30" height="30"></div>		 
+      <hr></hr>
+		   <h2 align="right"><font color="white"><b>Contact Us </b></font></h2>
+	       <h3 align=""> <font color="white"><p> KNIT Campus Sultanpur</p>
+		   <p> Pin : 228118 </p>
+           <p> +91 9794658850 ; +91 7905432251 </p>	</font> </h3>
+           <p align="right"> <a href="enquiry.html"><b>Send message</b></a></p> 		   	 
+	 <div class="text2"><h5 align="center"><font color="black"><b>&copy; 2018  All Rights Reserved.CodeVendor</b></font></h5></div>	 
+</div>	
+
+	 -->
+	
+<!--
+    <div class="bxslider">
+        <div><img src="" title="Funky roots"></div>
+        <div><img src="" title="The long and winding road"></div>
+        <div><img src="" title="Happy trees"></div>
+    </div>
+-->
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+ <script type="text/javascript" src="component/js/parallax.min.js"></script>
+     <script src="component/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

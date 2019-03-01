@@ -1,0 +1,16 @@
+body{
+   background-image: url(/1.jpg); 
+    
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-bottom: auto;
+    margin-right: auto;
+    
+}
+#section1
+{
+/*       background:url('../components/../1.jpg');*/
+     background:url('../1.jpg') center center fixed;
+    
+    
+}

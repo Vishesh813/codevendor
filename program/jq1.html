@@ -1,0 +1,116 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="img/logo.png">
+    <title>Codevendor|Inhance your learning</title>
+
+    <!-- Bootstrap -->
+    <link href="component/css/bootstrap.css" rel="stylesheet">
+    <link href="component/css/mainstyle.css" rel="stylesheet">
+    <link href="component/css/font-awesome.min.css" rel="stylesheet">
+    <link href="component/css/font-awesome.css" rel="stylesheet">
+    
+<style>
+    #center {
+    width: 500px;
+    margin-left: 500px;
+   }  
+    #p1
+{ 
+     font-family: "calibri";  
+	 color: #00cccc;
+	 background:black;
+	 font-size:large;
+	 
+} 
+ </style>
+</head>
+<body style="">
+<div id="p1">
+</div>
+<h3 align="center" style="color: #00ff00;background:black;">Program</h3>
+ <div id="center">
+          <button type="button"style="color: #00ff00;background:black;" >try yourself</button>
+        </div>
+<pre>
+<xmp id="p1" >
+	class student
+{
+   int rollno;
+   String name;
+   int marks;
+   student()
+  {
+    rollno=1111;
+    name="Varun";
+    marks=470;
+  }
+  student(int rno,String n,int m)
+   {
+     rollno=rno;
+     name=n;
+     marks=m;
+    }
+  float compute_percentage()
+  {
+   float f;
+   f=marks*100/625;
+   return(f);
+  }
+  void print()
+  {
+     System.out.println("Rollno-"+rollno);
+     System.out.println("Name-"+name);
+     System.out.println("Marks-"+marks);
+  }
+}
+class studdemo
+{
+  public static void main(String arg[])
+  {
+     student s1=new student();
+     s1.print();
+     System.out.println("Percentage is "+s1.compute_percentage());
+     System.out.println();
+     student s2=new student(2222,"Demo",620);
+     s2.print();
+     System.out.println("Percentage is "+s2.compute_percentage());
+  }
+} 
+-------------------------------------------------------------------
+OUTPUT:
+Rollno-1111
+Name-Varun
+Marks-470
+Percentage is 75.0
+
+Rollno-2222
+Name-Demo
+Marks-620
+Percentage is 99.0
+
+</xmp>
+</pre>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="component/js/bootstrap.min.js"></script>
+    <script src="component/js/jquery-3.2.1.js"></script>
+    <script>
+        //   $('#myCarousel').on("slide.bs.carousel", function(){
+        //     $(".carousel-control",this).css('top',($(".active img",this).height()*0.46)+'px');
+        //     $(this).off("slide.bs.carousel");
+        //});
+    </script>
+
+
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+</body>
+</html>

@@ -1,0 +1,88 @@
+<?php
+
+
+// session_start();
+
+// if (isset($_SESSION['email'])) 
+//    {
+//      header('location:home.php');
+//    }
+
+
+//$conn = mysqli_connect('localhost','root','','codevendor') ;
+
+//if($conn==true){echo " cnkjdbjb";}
+  
+  
+ 
+// else{
+
+
+
+// $query = "select * from signup where email = '$email' AND password = '$password' ";
+
+// $run =mysqli_query($conn,$query);
+// $row=mysqli_fetch_assoc($run);
+// $rowcount=mysqli_num_rows($run);
+
+
+// if($rowcount>0)
+// {
+//  $_SESSION['email']= $row['email'];
+//   header('location:home.php');
+// }
+
+// else{
+
+//   echo "email or password does'nt exists";
+//    }  
+
+//  }
+
+//     }
+
+
+//
+
+?>
+
+
+
+
+
+<?php
+ session_start();
+
+ if (isset($_SESSION['email'])) 
+   {
+     header('location:home.php');
+   }
+
+// $conn= mysqli_connect('localhost','id4814971_vishesh',"14021995",'id4814971_login_signup') ;
+ $conn = mysqli_connect('localhost','root','','codevendor') ; 
+ if(isset($_POST['login_btn'])){     
+
+       $email =  $_POST['email'];
+       $password =$_POST['password'];
+          
+         $query = "select * from signup where email ='$email' AND password ='$password'";
+         $run=mysqli_query($conn,$query);  
+         $row=mysqli_fetch_assoc($run);
+
+          $_SESSION['username']= $row['username'];
+
+          echo $_SESSION['email'];
+
+         if($email=='admin@gmail.com' AND $password=='admin'){
+             header("location:admin.php");
+         }
+
+         else{
+        $rowcount=mysqli_num_rows($run);
+         if($rowcount>0){
+          header("location:home.php");
+          }
+           
+       }
+}
+  ?>

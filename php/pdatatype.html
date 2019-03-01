@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Codevendor &mdash; Inhance your learning</title>
+<link href="component/css/php.css" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif');
+</style>
+</head>
+<body >
+	<div class="main">
+		   <h3 align="center" valign="top">Php Data type</h3>
+  <p> 
+  Variables can store data of different types, and different data types can do different things.
+
+PHP supports the following data types:
+	 </p>
+	    
+			<ul style="list-style-type:hand">
+<li>String</li>
+<li>Integer</li>
+<li>Float</li>
+<li>Boolean</li>
+<li>Array</li>
+<li>Object</li>
+<li>Resorces</li>
+
+	 </ul>
+	  </p>
+	 <h3>PHP String</h3>
+<p>A string is a sequence of characters, like "Hello world!".
+
+A string can be any text inside quotes. You can use single or double quotes:
+	</p>
+	<h3>A simple example</h3>
+	<div class="block">
+	 <xmp>
+		<?php 
+		$x = "Hello world!";
+		$y = 'Hello world!';
+
+		echo $x;
+		echo "<br>"; 
+		echo $y;
+		?>
+	 </xmp>
+	</div>
+	<h4>Output:</h4>
+	<pre>
+		Hello world!
+        Hello world!</pre>
+			<h3>PHP Integer</h3>
+			<p>An integer data type is a non-decimal number between -2,147,483,648 and 2,147,483,647.<br>
+
+              Rules for integers:</p>
+			<ul>
+				<li>An integer must have at least one digit</li>
+				<li>An integer must not have a decimal point</li>
+				<li>An integer can be either positive or negative</li>
+				<li>Integers can be specified in three formats: decimal (10-based), hexadecimal (16-based - prefixed with 0x) or octal (8-based - prefixed with 0)</li>
+			</ul>
+			<p>In the following example $x is an integer. The PHP var_dump() function returns the data type and value:</p>
+			<h4>Example:</h4>
+			<div class="block">
+			 <xmp>
+				<?php 
+				$x = 5985;
+				var_dump($x);
+				?>
+			 </xmp>
+			</div>
+			<h4>Output:</h4>
+			<pre>
+				int(5985)</pre>
+				<h3>PHP Float</h3>
+			<p>A float (floating point number) is a number with a decimal point or a number in exponential form.
+
+In the following example $x is a float. The PHP var_dump() function returns the data type and value:<br>
+
+             </p>
+			
+			<h4>Example:</h4>
+			<div class="block">
+			 <xmp>
+				<?php 
+				$x = 10.365;
+				var_dump($x);
+				?>
+			 </xmp>
+			</div>
+			<h4>Output:</h4>
+			<pre>
+				float(10.365)</pre>
+				<h3>PHP Boolean</h3>
+			<p>A Boolean represents two possible states: TRUE or FALSE.
+
+             </p>
+			
+			<h4>Example:</h4>
+			<div class="block">
+			 <xmp>
+				$x = true;
+                $y = false;
+			 </xmp>
+			</div>
+			<p>Booleans are often used in conditional testing. You will learn more about conditional testing in a later chapter of this tutorial.</p>
+			<h3>PHP Array</h3>
+			<p>An array stores multiple values in one single variable.
+
+In the following example $cars is an array. The PHP var_dump() function returns the data type and value:
+
+             </p>
+			
+			<h4>Example:</h4>
+			<div class="block">
+			 <xmp>
+				<?php 
+				$cars = array("Volvo","BMW","Toyota");
+				var_dump($cars);
+				?>
+			 </xmp>
+			</div>
+			<h4>Output:</h4>
+			<pre>
+				array(3) { [0]=> string(5) "Volvo" [1]=> string(3) "BMW" [2]=> string(6) "Toyota" }</pre>
+				<h3>PHP Object</h3>
+			<p>An object is a data type which stores data and information on how to process that data.
+
+In PHP, an object must be explicitly declared.
+
+First we must declare a class of object. For this, we use the class keyword. A class is a structure that can contain properties and methods
+
+             </p>
+			
+			<h4>Example:</h4>
+			<div class="block">
+			 <xmp>
+				<?php
+				class Car {
+				    function Car() {
+				        $this->model = "VW";
+				    }
+				}
+
+				// create an object
+				$herbie = new Car();
+
+				// show object properties
+				echo $herbie->model;
+				?>
+
+			 </xmp>
+			</div>
+			<h4>Output:</h4>
+			<pre>
+				VW</pre>
+				<h3>PHP NULL Value</h3>
+			<p>Null is a special data type which can have only one value: NULL.
+
+				A variable of data type NULL is a variable that has no value assigned to it.
+
+				Tip: If a variable is created without a value, it is automatically assigned a value of NULL.
+
+				Variables can also be emptied by setting the value to NULL:
+				             </p>
+			
+			<h4>Example:</h4>
+			<div class="block">
+			 <xmp>
+				<?php
+				$x = "Hello world!";
+				$x = null;
+				var_dump($x);
+				?>
+			 </xmp>
+			</div>
+			<h4>Output:</h4>
+			<pre>
+				NULL</pre>
+				<h3>PHP Resource</h3>
+			<p>The special resource type is not an actual data type. It is the storing of a reference to functions and resources external to PHP.
+
+               A common example of using the resource data type is a database call.
+				             </p>
+
+		</div>
+</body>
+
+</html>

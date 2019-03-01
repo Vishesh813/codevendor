@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Codevendor &mdash; Inhance your learning</title>
+<link href="component/css/php.css" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif');
+</style>
+</head>
+<body >
+	<div class="main">
+		   <h3 align="center" valign="top">PHP String Functions</h3>
+  <p> 
+  In this chapter we will look at some commonly used functions to manipulate strings.
+	 </p>
+	 <h4>Get The Length of a String</h4>
+	    <p>The PHP strlen() function returns the length of a string.
+
+The example below returns the length of the string "Hello world!":</p>
+	<h3>Example</h3>
+	<div class="block">
+	 <xmp>
+		<?php
+		echo strlen("Hello world!"); // outputs 12
+		?>
+	 </xmp>
+	</div>
+	<h4>Output:</h4>
+	<pre>
+		12</pre>
+			<h3>Count The Number of Words in a String</h3>
+			<p>The PHP str_word_count() function counts the number of words in a string::</p>
+			<h4>Example:</h4>
+			<div class="block">
+			 <xmp>
+				<?php
+				echo str_word_count("Hello world!"); // outputs 2
+
+				?>
+			 </xmp>
+			</div>
+			<h4>Output:</h4>
+			<pre>
+				2</pre>
+				<h3>Reverse a String</h3>
+			<p>The PHP strrev() function reverses a string:
+             </p>
+			
+			<h4>Example:</h4>
+			<div class="block">
+			 <xmp>
+				<?php
+				echo strrev("Hello world!"); // outputs !dlrow olleH
+				?>
+			 </xmp>
+			</div>
+			<h4>Output:</h4>
+			<pre>
+				!dlrow olleH</pre>
+				<h3>Search For a Specific Text Within a String</h3>
+			<p>The PHP strpos() function searches for a specific text within a string.
+
+			If a match is found, the function returns the character position of the first match. If no match is found, it will return FALSE.
+
+			The example below searches for the text "world" in the string "Hello world!":
+
+             </p>
+			
+			<h4>Example:</h4>
+			<div class="block">
+			 <xmp>
+				<?php
+				echo strpos("Hello world!", "world"); // outputs 6
+				?>
+
+			 </xmp>
+			</div>
+			<h4>Output:</h4>
+			<pre>
+				6</pre>
+			<h3>Replace Text Within a String</h3>
+			<p>The PHP str_replace() function replaces some characters with some other characters in a string.
+
+The example below replaces the text "world" with "Dolly":
+             </p>
+			
+			<h4>Example:</h4>
+			<div class="block">
+			 <xmp>
+				<?php
+				echo str_replace("world", "Dolly", "Hello world!"); // outputs Hello Dolly!
+				?>
+			 </xmp>
+			</div>
+			<h4>Output:</h4>
+			<pre>
+				Hello Dolly!</pre>
+				<h3>Complete PHP String Reference</h3>
+			<p>For a complete reference of all string functions, go to our complete <a href="">PHP String Reference.</a>
+
+The PHP string reference contains description and example of use, for each function!
+             </p>
+			
+		</div>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Codevendor &mdash; Inhance your learning</title>
+<link href="component/css/php.css" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif');
+</style>
+</head>
+<body>
+	<div class="main">
+		   <h3 align="center" valign="top">Quick Sort in C</h3>
+  <p> 
+Quick Sort, as the name indicate, sorts any list of data very quickly. Quick sort very fast data sorting technique and it requires very less additional space. It is based on the rule of Divide and Conquer(also called partition-exchange sort).	 </p>
+<h4>
+	Quick sort algorithm contain mainly three parts;
+</h4>
+<p>
+	•	Elements less than the Pivot element<br>
+	•	Pivot element<br>
+	•	Elements greater than the pivot element
+
+
+</p>
+	 <img src="component/img/quicksort.gif" align="center">
+	 <h4>Example of quick sort</h4>
+	 <xmp>
+	 	#include<stdio.h>
+		#include<conio.h>
+
+		void quicksort(int [],int,int);
+		int partition(int [],int,int);
+
+		main()
+		{
+		int a[20],p,q,i,n;
+		clrscr();
+
+		printf("How many elements you want to enter: ");
+		scanf("%d",&n);
+		for(i=0; i<n; i++)
+		{
+		printf("\nEnter any %d elements: "n);
+		scanf("%d",&a[i]);
+		}
+
+		p=0;
+		q=n-1;
+		printf("\n\n\nArray Befor Sorting : ");
+		for(i=0; i<n; i++)
+		{
+		delay(500);
+		printf("%5d",a[i]);
+		}
+		quicksort(a,p,q);
+
+		printf("\n\n\nArray After Sorting : ");
+		for(i=0; i<n; i++)
+		{
+		delay(500);
+		printf("%5d",a[i]);
+		}
+		getch();
+		return 0;
+		}
+
+
+		void quicksort(int a[],int p,int q)
+		{
+		int j;
+		if(p<q)
+		{
+		j=partition(a,p,q+1);
+		quicksort(a,p,j-1);
+		quicksort(a,j+1,q);
+		}
+		}
+
+		int partition(int a[],int m,int p)
+		{
+		int v,i,j;
+		int temp;
+		v=a[m];
+		i=m;j=p;
+		do
+		{
+		do
+		{
+		i += 1;
+		}
+		while(a[i]<v);
+		do
+		{
+		j -= 1;
+		}
+		while(a[j]>v);
+
+		if(i<j)
+		{
+		temp = a[i];
+		a[i] = a[j];
+		a[j] = temp;
+		}
+		}
+		while(i<j);
+		a[m] =a[j];
+		a[j] = v;
+		return j;
+		}
+    </xmp>
+	
+	<button class="button1"><a href="web/quick.html">Live View</a></button>
+	
+    <h4>Output</h4>
+    <pre>
+    	Enter size of array: 8
+		Enter 8 elements in arry
+		3
+		6
+		2
+		1
+		4
+		7
+		5
+		8
+		After Sorting elements: 1  2  3  4  5  6  7  8
+    </pre>
+
+	</div>
+</body>
+
+</html>

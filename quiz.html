@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <link rel="shortcut icon" href="component/img/logo.png">
+		<title>Quiz &mdash; Judge Yourself</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+		<link href="component/css/quiz.css" rel="stylesheet">
+		<link href="component/css/bootstrap.css" rel="stylesheet">
+        <link href="component/css/mainstyle.css" rel="stylesheet">
+       
+		
+	</head>
+	<body>
+	 <div>
+  <video autoplay muted loop id="myVideo">
+  <source src="component/img/bg7.mp4" type="video/mp4">
+</video>
+</div>
+
+   <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top  ">
+        <div class="container-fluid">
+            <div class="navbar-header ">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+                <a class="navbar-brand wow flip"><img src ="component/img/logo.png" class="img-circle" class="img-responsive" style="background-color:#cccccc" width="50" height="50"> codevendor</a>
+            </div>
+             <div class="collapse navbar-collapse" id="myNavbar">
+                     <ul class="nav navbar-nav navbar-right">
+                     <li><a href="home.html">Home</a></li>
+					
+                    
+                    <li><a href="#">Tutorials</a>
+					    <ul class="dropdown">
+						            <div class="fpage">
+                                <table style="float:right;background:gray;border-radius: 10px;" cellpadding="10px">
+                                    <tr>
+                                        <td><a href="data.html"><img class="img-circle" src="component/img/ds.jpg" width="100" height="100"></a></td>
+                                        <td><a href="html.html"><img class="img-circle" src="component/img/HTML.png" width="100" height="100"></a></td>
+                                        <td><a href="css.html"><img class="img-circle" src="component/img/css.jpg" width="100" height="100"></a></td>
+										
+                                    </tr>
+                                    <tr>
+									     <td><a href="oos.html"><img class="img-circle" src="component/img/oss.jpg" width="100" height="100"></a></td>
+   										 <td><a href="php.html"><img class="img-circle" src="component/img/a4.jpg" width="100" height="100"></a></td>
+                                         <td><a href="quiz.html"><img class="img-circle" src="component/img/quiz.jpg" width="100" height="100"></a></td>
+									  </tr> 
+									  <tr>
+									     
+										 </tr> 
+                                </table>
+                            </div>
+						      </ul>		
+                      <li><a href="htmlviewer.html">HTML live</a></li>							  
+                    <li><a href="enquiry.html">Contact Us </a></li>
+					<li><a href="about.html">About</a></li>
+                    <li><a href="#">Logout</a></li>
+                </div>
+            </div>
+        </nav>
+    </div>
+	</div>
+	</div>
+   
+
+		<div id="quizContainer" class="container">
+			<div class="title">Test Yourself</div>
+			<div id="question" class="question"></div>
+			<label class="option"><input type="radio" name="option" value="1" /> <span id="opt1"></span></label>
+			<label class="option"><input type="radio" name="option" value="2" /> <span id="opt2"></span></label>
+			<label class="option"><input type="radio" name="option" value="3" /> <span id="opt3"></span></label>
+			<label class="option"><input type="radio" name="option" value="4" /> <span id="opt4"></span></label>
+			<button id="nextButton" class="next-btn" onclick="loadNextQuestion();">Next Question</button>
+		</div>
+		<div id="result" class="container result" style="display:none;">
+		</div>
+		<script src="component/js/question.js"></script>
+		<script src="component/js/quiz-script.js"></script>
+	</body>
+</html>

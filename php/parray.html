@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Codevendor &mdash; Inhance your learning</title>
+<link href="component/css/php.css" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif');
+</style>
+</head>
+<body>
+	<div class="main">
+		   <h3 align="center" valign="top">PHP 5 Arrays</h3>
+  <p> 
+An array stores multiple values in one single variable:
+
+	 </p>
+	 
+	
+	<h3>Example:</h3>
+	<div class="block">
+	 <xmp>
+		<?php
+		$cars = array("Volvo", "BMW", "Toyota");
+		echo "I like " . $cars[0] . ", " . $cars[1] . " and " . $cars[2] . ".";
+		?>
+	 </xmp>
+	</div>
+	<h4>Output:</h4>
+	<pre>
+		I like Volvo, BMW and Toyota.
+	</pre>
+			<h3>What is an Array?PHP Function Arguments</h3>
+			<p>An array is a special variable, which can hold more than one value at a time.<br>
+
+If you have a list of items (a list of car names, for example), storing the cars in single variables could look like this:</p>
+<pre>
+	$cars1 = "Volvo";
+	$cars2 = "BMW";
+	$cars3 = "Toyota";
+</pre>
+<p>
+	However, what if you want to loop through the cars and find a specific one? And what if you had not 3 cars, but 300?<br>
+
+The solution is to create an array!<br>
+
+An array can hold many values under a single name, and you can access the values by referring to an index number.
+</p>
+        <h3>Create an Array in PHP</h3>
+        <p>In PHP, the array() function is used to create an array:</p>
+        <pre>
+        	array();
+        </pre>
+		<p>
+			In PHP, there are three types of arrays:<br>
+•	<h4>Indexed arrays</h4> - Arrays with a numeric index<br>
+•	<h4>Associative arrays</h4> - Arrays with named keys<br>
+•	<h4>Multidimensional arrays</h4> - Arrays containing one or more arrays
+
+
+		</p>
+		<h3>PHP Indexed Arrays</h3>
+		<p>
+			There are two ways to create indexed arrays:<br>
+
+The index can be assigned automatically (index always starts at 0), like this:
+		</p>
+		<pre>
+			$cars = array("Volvo", "BMW", "Toyota");
+		</pre>
+		<p>or the index can be assigned manually:</p>
+		<pre>
+			$cars[0] = "Volvo";
+			$cars[1] = "BMW";
+			$cars[2] = "Toyota";
+		</pre>
+		<p>
+			The following example creates an indexed array named $cars, assigns three elements to it, and then prints a text containing the array values:
+		</p>
+			<h4>Example:</h4>
+			<div class="block">
+			 <xmp>
+				<?php
+				$cars = array("Volvo", "BMW", "Toyota");
+				echo "I like " . $cars[0] . ", " . $cars[1] . " and " . $cars[2] . ".";
+				?>
+			 </xmp>
+			</div>
+			<h4>Output:</h4>
+			<pre>
+				I like Volvo, BMW and Toyota.
+			</pre>
+			<h3>Get The Length of an Array - The count() Function</h3>
+			<p>
+				TThe count() function is used to return the length (the number of elements) of an array:
+			</p>
+			
+			<h4>Example:</h4>
+			<div class="block">
+			 <xmp>
+			<?php
+			$cars = array("Volvo", "BMW", "Toyota");
+			echo count($cars);
+			?>
+			 </xmp>
+			</div>
+			<h4>Output:</h4>
+			<pre>
+				3 
+			</pre>
+				<h3>Loop Through an Indexed Array</h3>
+			<p>To loop through and print all the values of an indexed array, you could use a for loop, like this:
+
+             </p>
+			
+			<h4>Example:</h4>
+			<div class="block">
+			 <xmp>
+				<?php
+				$cars = array("Volvo", "BMW", "Toyota");
+				$arrlength = count($cars);
+
+				for($x = 0; $x < $arrlength; $x++) {
+				    echo $cars[$x];
+				    echo "<br>";
+				}
+				?>
+			 </xmp>
+			</div>
+			<h4>Output:</h4>
+			<pre>
+				Volvo
+				BMW
+				Toyota
+			</pre>
+			<h3>PHP Associative Arrays</h3>
+			<p>Associative arrays are arrays that use named keys that you assign to them.<br>
+
+There are two ways to create an associative array: 
+             </p>
+             <pre>
+             	$age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+             	<h4>OR</h4>
+             	$age['Peter'] = "35";
+				$age['Ben'] = "37";
+				$age['Joe'] = "43";
+             </pre>
+			
+			<h4>Example:</h4>
+			<div class="block">
+			 <xmp>
+				<?php
+				$age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+				echo "Peter is " . $age['Peter'] . " years old.";
+				?>
+			 </xmp>
+			</div>
+			<h4>Output:</h4>
+			<pre>
+				Peter is 35 years old
+			</pre>
+			<h3>Loop Through an Associative Array</h3>
+			<p>To loop through and print all the values of an associative array, you could use a foreach loop, like this:</p>
+			<h4>Example:</h4>
+			<div class="block">
+			 <xmp>
+				<?php
+				$age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+
+				foreach($age as $x => $x_value) {
+				    echo "Key=" . $x . ", Value=" . $x_value;
+				    echo "<br>";
+				}
+				?>
+			 </xmp>
+			</div>
+			<h4>Output:</h4>
+			<pre>
+				Key=Peter, Value=35
+				Key=Ben, Value=37
+				Key=Joe, Value=43
+			</pre>
+		
+		
+			
+		</div>
+</body>
+
+</html>

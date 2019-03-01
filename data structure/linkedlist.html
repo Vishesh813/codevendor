@@ -1,0 +1,220 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Codevendor &mdash; Inhance your learning</title>
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+<style>
+.button1 {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    margin-left: 40%;
+}
+pre {
+    color: blue;
+	text-align: justify;
+	font-family: 'Noto Serif', serif;
+	//valign:top;
+	//margin-left: 20px;
+	padding-left:20px;
+	word-spacing:5px;
+}
+#p1 {
+    display: block;
+    margin-top:;
+    margin-bottom:;
+   // margin-left: 20px;
+    margin-right: 0;
+	word-spacing:5px;
+}
+h1 {
+    color: green;
+}
+#p2 {
+    color:blue;
+   // padding-left:20px;
+   // margin-left: 20px
+    height: auto;
+    max-height: 600px;
+    overflow: auto;
+	border-color:blue;
+    //background-color: #eeeeee;
+    word-break: normal !important;
+    word-wrap: normal !important;
+    white-space: pre !important;
+	word-spacing:5px;
+    font-family: 'Noto Serif', serif;
+}​
+#margi{
+      margin-right: 10%;
+ }
+</style>
+</head>
+<body style="font-family: 'Noto Serif', serif;">
+<div style="margin-right: 10%;">
+<h3 align="center" valign="top">Linked List</h3>
+		   <div id="p1">
+  <p>
+Linked list is a special type of data structure where all data elements are linked to one another. Linked list is the collection of nodes and every nodes contains two parts data part and address part.  
+ 	 </p>
+		<img src="component/img/link1.png" style="padding-left:150px">
+		<p>
+<h4>Why use Linked List</h4>
+Suppose you want ot store marks of 50 students, so need to write code like below;
+
+<h4>Example</h4>
+	
+<h4 align="center">int marks[50];</h4>
+But some time you need to store more than 50 students marks, in that case you can not increase memory of array, and some time you need to store less than 50 students marks in this case extra memory will be wastage. To overcome this problem you need to use Linked List because in linked list memory will be created at run time.	
+	 
+	  </p>
+	 <h3>Advantages of linked list</h3>
+<p style="margin-left:15px;">1.	Linked List is Dynamic data Structure .</br>
+2.	Linked List can grow and shrink during run time.</br>
+3.	Insertion and Deletion Operations are Easier</br>
+4.	Efficient Memory Utilization ,i.e no need to pre-allocate memory</br>
+5.	Faster Access time,can be expanded in constant time without memory overhead</br>
+6.	Linear Data Structures such as Stack,Queue can be easily implemetedusing Linked list</br>
+
+	<h5>Dynamic Data Structure:</h5> The size of linked list increase and decrease during program execution.
+	<h5>No memory wastage:</h5> In linked list memory will be allocated at the time of program execution so no memory wastage.
+<h5>Easily insert and delete data:</h5> In linked list you can insert any data at specific position and also delete any data from specific position.
+
+
+</p>
+	<h3>Add a node at the beginning of the linked list</h3>
+	 <p>
+Add a node at the beginning of the linked list..</br>
+
+<pre style="border-style: solid;">node* head;</pre>
+First, we need to create a new node. We will need to create a new node each time we want to insert a new node into the list so we can develop a function that creates a new node and return it.
+<pre style="border-style: solid;">node* create(int data,node* next)
+{
+    node* new_node = (node*)malloc(sizeof(node));
+    if(new_node == NULL)
+    {
+        printf("Error creating a new node.\n");
+        exit(0);
+    }
+    new_node->data = data;
+    new_node->next = next;
+ 
+    return new_node;
+}
+</pre>
+<button class="button1"><a href="web/singlylinked.html">Live View</a></button>
+<br>
+<br>
+Second, we need to point the next pointer of the new node to the head pointer and point the head pointer to the new node. It works for both empty and non-empty linked list.
+<pre style="border-style: solid;">node* prepend(node* head,int data)
+{
+    node* new_node = create(data,head);
+    head = new_node;
+    return head;
+}
+</pre>
+<img src="component/img/l1.png">
+<h3>Insert a new node after a particular node</h3>
+To insert a new node after a particular node, we need to:</br>
+First, verify if the node exists in the list, we call this node is prev node
+<pre style="border-style: solid;">node *cursor = head;
+while(cursor != prev)
+   cursor = cursor->next;</pre>
+   If it exists, we point the next pointer of the new node to the next node that the next pointer of the prev node points to, and point the next pointer of the prev node to the new node.
+<pre style="border-style: solid;">node* new_node = create(data,cursor->next);
+cursor->next = new_node;
+</pre>
+<img src="component/img/l2.png" width="60%">
+The insert_after() function is as follows:
+<pre style="border-style: solid;">node* insert_after(node *head, int data, node* prev)
+{
+    /* find the prev node, starting from the first node*/
+    node *cursor = head;
+    while(cursor != prev)
+        cursor = cursor->next;
+ 
+    if(cursor != NULL)
+    {
+        node* new_node = create(data,cursor->next);
+        cursor->next = new_node;
+        return head;
+    }
+    else
+    {
+        return NULL;
+    }
+}
+</pre>
+	 </p>
+	  </div>
+      <h3>Insert a new node at the End of the list</h3>
+      <img src="component/img/l3.png">
+<p>Since a Linked List is typically represented by the head of it, we have to traverse the list till end and then change the next of last node to new node.
+<pre style="border-style: solid;">void append(struct Node** head_ref, int new_data)
+{
+    /* 1. allocate node */
+    struct Node* new_node = (struct Node*) malloc(sizeof(struct Node));
+ 
+    struct Node *last = *head_ref;  /* used in step 5*/
+  
+    /* 2. put in the data  */
+    new_node->data  = new_data;
+ 
+    /* 3. This new node is going to be the last node, so make next 
+          of it as NULL*/
+    new_node->next = NULL;
+ 
+    /* 4. If the Linked List is empty, then make the new node as head */
+    if (*head_ref == NULL)
+    {
+       *head_ref = new_node;
+       return;
+    }  
+      
+    /* 5. Else traverse till the last node */
+    while (last->next != NULL)
+        last = last->next;
+  
+    /* 6. Change the next of last node */
+    last->next = new_node;
+    return;    
+	
+}</pre>
+<button class="button1"><a href="web/singlylinked.html">Live View</a></button>
+     </p>
+     <h3 align="center">Types of linklist</h3>
+    <table width="100%" width="100%" border="0px">
+        <tr>
+            <th>Type</th>
+            <th>GoTo Live</th>
+        </tr>
+        <tr>
+            <td align="center">Linear Link list</td>
+            <td><button class="button1"><a href="web/singlylinked.html">Live View</a></button></td>
+        </tr>
+        <tr>
+            <td align="center">Doubly linklist</td>
+            <td><button class="button1"><a href="web/circularlinked.html">Live View</a></button></td>
+        </tr>
+        <tr>
+           <td align="center">Circuler Link list</td>
+            <td><button class="button1"><a href="web/circularlinked.html">Live View</a></button></td>
+        </tr>
+        <tr>
+            <td align="center">Circuler doubly linklist</td>
+            <td><button class="button1"><a href="web/circularlinked.html">Live View</a></button></td>
+        </tr>
+        
+    </table>
+      </div>
+	 </body>
+
+</html>

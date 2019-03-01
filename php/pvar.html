@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Codevendor &mdash; Inhance your learning</title>
+<link href="component/css/php.css" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif');
+</style>
+</head>
+<body >
+	<div class="main">
+		   <h3 align="center" valign="top">PHP variables</h3>
+  <p> 
+		 Variable is a symbol or name that stands for a value. Variables are used for storing values such as numeric values, characters, character strings, or memory addresses so that they can be used in any part of the program.
+
+		<h4>Declaring PHP variables</h4>
+
+		All variables in PHP start with a $ (dollar) sign followed by the name of the variable.
+
+		A valid variable name starts with a letter (A-Z, a-z) or underscore (_), followed by any number of letters, numbers, or underscores.
+
+		If a variable name is more than one word, it can be separated with an underscore (for example $employee_code instead of $employeecode).
+
+		'$' is a special variable that can not be assigned.
+	 </p>
+	 <h3>Example :</h3> <h4>Valid and invalid PHP variables </h4>
+		
+	<div class="block">
+		<xmp>
+	 		   	<?php
+				$abc = 'Welcome';  //valid
+				$Abc = 'W3resource.com'; //valid
+				$9xyz = 'Hello world';  //invalid; starts with a number
+				$_xyz = 'Hello world';  //valid; starts with an underscore
+				$_9xyz = 'Hello world';  //valid
+				$aäa = 'Hello world';  //valid; 'ä' is (Extended) ASCII 228.
+				?>
+		</xmp>
+	</div>
+			
+			<h3>PHP variable name is case-sensitive</h3>
+			<p>Consider the following example :
+			</p>
+			<div class="block">
+	 		   <xmp>
+	 		    <?php
+				$abc = 'Welcome';
+				echo "Value of abc : $abc";
+				echo "Value of ABC : $ABC";
+				?>
+		       </xmp>
+		    </div>
+		   <h3>PHP is a loosely type language</h3>
+		   <p>In a language such as C, C++, and Java the programmer must declare the name and type of the variable before use it. In PHP the type of the variable does not need to be declared before use it  because types are associated with values rather than variables. As a result, a variable can change the type of its value as much as we want.
+
+			As previously mentioned you don't need to declare variables or their type before using them in PHP. In the following example, none of the variables are declared before they are used, the fact is $height is floating number and $width is an integer. </p>
+			<div class="block">
+	 		   <xmp>
+	 		   	<?php
+				$height = 3.5;
+				$width = 4;
+				$area=$height*$width;
+				echo "Area of the rectangle is : $area";
+				?>
+		      </xmp>
+		   </div>
+		   <h3>PHP variables: Assigning by Reference</h3>
+		   <p>PHP (from PHP4) offers another way to assign values to variables: assign by reference. This means that the new variable simply points the original variable. Changes to the new variable affect the original, and vice a verse.</p>
+		   <h3>Example:</h3>
+			<div class="block">
+	 		   <xmp>
+	 		   <?php 
+				$foo='bob';
+				$bar=&$foo;
+				$bar="my $bar";
+				echo $bar;
+				echo '<br />';
+				echo $foo;
+				?>
+		       </xmp>
+		   </div>
+		   <h3>Output</h3>
+		   <pre>
+		   	my bob
+            my bob
+		   </pre>
+		   <h3>PHP variable variables</h3>
+	       <p>You know how to declare variables in PHP. But what if you want the name your variable is a variable itself? In PHP, you have Variable Variables, so you may assign a variable to another variable. In the following example at line no. 2, we declared a variable called $v which stores the value 'var1' and in line no. 4, "var1" is used as the name of a variable by using two dollar signs. i.e. $$v.
+
+Therefore there are two variables now. $v which stores the value "var1" where as $$v which stores the value var2. At this point $$v and $var1 are equal, both store the value "var2".</p>
+           <h3>Example:</h3>
+	       <div class="block">
+	 		   <xmp>
+	 		   	<?php
+				$v='var1';
+				echo $v; // prints var1
+				$$v = 'var2'; 
+				echo $$v; // prints var2
+				echo $var1; // prints var2
+				?>
+		       </xmp>
+		   </div>
+		   <h4>PHP Variables Scope</h4>
+		   <p>In PHP, variables can be declared anywhere in the script. We declare the variables for a particular scope. There are two types of scope, the local scope where variables are created and accessed inside a function and global scope where variables are created and accessed outside a function.</p>
+			<h3>Example:</h3>
+			<div class="block">
+	 		   <xmp>
+	 		   <?php
+				//global scope
+				$x = 10;
+				function var_scope()
+				{
+				//local scope
+				$y=20;
+				echo "The value of x is :  $x "."<br />";
+				echo "The value of y is :  $y"."<br />";
+				}
+				var_scope();
+				echo "The value of x is :  $x"."<br />";
+				echo "The value of y is :  $y ";
+				?> 
+
+		       </xmp>
+		    </div>
+		    	<h4>Output:</h4>
+	 		   <pre>
+	 		   The value of x is :
+			  The value of y is :  20
+			  The value of x is :  10
+			  The value of y is : 
+		       </pre>
+		       
+		       <p>
+		       	In the above script there are two variables $x and $y and a function var_scope(). $x is a global variable since it is declared outside the function and $y is a local variable as it is created inside the function var_scope(). At the end of the script var_scope() function is called, followed by two echo statements. Lets see the output of the script :
+		       </p>
+		       <p>There are two echo statements inside var_scope() function. It prints the value of $y as it is the locally declared and can not prints the value of $x since it is created outside the function.
+
+				The next statement of the script prints the value of $x since it is global variable i.e. not created inside any function.
+
+				The last echo statement can not prints the value of $y since it is local variable and it is created inside the function var_scope() function.</p>
+				<h3>The global keyword</h3>
+				<p>We have already learned variables declared outside a function are global. They can be accessed anywhere in the program except within a function.
+
+				To use these variables inside a function the variables must be declared global in that function. To do this we use the global keyword before the variables. Consider the following the example :</p>
+				<h3>Example:</h3>
+			<div class="block">
+	 		   <xmp>
+	 		   <?php
+				$x=2;
+				$y=4;
+				$z=5;
+				$xyz=0;
+				function multiple()
+				{
+				global $x, $y, $z, $xyz;
+				$xyz=$x*$y*$z;
+				}
+				multiple();
+				echo $xyz;
+				?>
+
+		       </xmp>
+		    </div>
+		    <p>In the above example $x, $y, $z, $xyz have initialized with 2, 4, 5, 0. Inside the multiple() function we declared $x, $y, $z, $xyz as global. Therefore all reference of each variable will refer to global version. Now call multiple() anywhere in the script and the variable $xyz will print 40 as it is already referred as global.</p>
+		    <h3>PHP static variables</h3>
+		    <p>Normally when a function terminates, all of its variables loose its values. Sometimes we want  to  hold these values for the further job. Generally, those variables which hold the values are called static variables inside a function. To do this we must write the keyword "static" in front of  those  variables. Consider the following example without a static variable. </p>
+		    <h3>Example:</h3>
+			<div class="block">
+	 		   <xmp>
+	 		   <?php
+				function test_count()
+				{
+				static $x=1;
+				echo $x;
+				$x++;
+				}
+				test_count();
+				echo "<br>";
+				test_count();
+				echo "<br>";
+				test_count();
+				?>
+
+		       </xmp>
+		    </div>
+		    <h4>Output:</h4>
+		    <pre>
+		    	1
+		    	2
+		    	3
+		    </pre>
+		    <h3>PHP : Reserve Words</h3>
+		    <p>The words in the following table are reserve words and cannot be used as constants, class names, function or method names. You can use them as variable names, but do not use as variable names to avoid confusion.</p>
+		    <table width="100%" height="auto" cellspacing="0" border="1px" cellpadding="10px">
+		    	<tr>
+		    		<td>abstract</td>
+		    		<td>and</td>
+		    		<td>array()</td>
+		    		<td>as</td>
+		    		<td>break</td>
+		    	</tr>
+		    	<tr>
+		    		<td>case</td>
+		    		<td>catch</td>
+		    		<td>class</td>
+		    		<td>clone</td>
+		    		<td>const</td>
+		    	</tr>
+		    	<tr>
+		    		<td>continue</td>
+		    		<td>declare</td>
+		    		<td>default</td>
+		    		<td>die()</td>
+		    		<td>do</td>
+		    	</tr>
+		    	<tr>
+		    		<td>echo</td>
+		    		<td>else</td>
+		    		<td>elseif</td>
+		    		<td>empty()</td>
+		    		<td>enddeclare</td>
+		    	</tr>
+		    	<tr>
+		    		<td>endfor</td>
+		    		<td>endforeach</td>
+		    		<td>endif</td>
+		    		<td>endswitch</td>
+		    		<td>endwhile</td>
+		    	</tr>
+		    	<tr>
+		    		<td>eval</td>
+		    		<td>exit()</td>
+		    		<td>extends</td>
+		    		<td>final</td>
+		    		<td>finally</td>
+		    	</tr>
+		    	<tr>
+		    		<td>for</td>
+		    		<td>foreach</td>
+		    		<td>function</td>
+		    		<td>globle</td>
+		    		<td>goto</td>
+		    	</tr>
+		    	<tr>
+		    		<td>if</td>
+		    		<td>implement</td>
+		    		<td>include</td>
+		    		<td>instanceof</td>
+		    		<td>insteadof</td>
+		    	</tr>
+		    	<tr>
+		    		<td>interface</td>
+		    		<td>isset()</td>
+		    		<td>list</td>
+		    		<td>namespace</td>
+		    		<td>new</td>
+		    	</tr>
+		    	<tr>
+		    		<td>or</td>
+		    		<td>print</td>
+		    		<td>private</td>
+		    		<td>protected</td>
+		    		<td>public</td>
+		    	</tr>
+		    	<tr>
+		    		<td>require</td>
+		    		<td>return</td>
+		    		<td>static</td>
+		    		<td>switch</td>
+		    		<td>throw</td>
+		    	</tr>
+		    	<tr>
+		    		<td>trait</td>
+		    		<td>try</td>
+		    		<td>unset</td>
+		    		<td>use</td>
+		    		<td>var</td>
+		    	</tr>
+		    	<tr>
+		    		<td>while</td>
+		    		<td>xor</td>
+		    		<td>yield</td>
+		    		<td></td>
+		    		<td></td>
+		    	</tr>
+		    	
+		    </table>
+		</div>
+</body>
+
+</html>

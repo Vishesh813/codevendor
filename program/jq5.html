@@ -1,0 +1,92 @@
+   <html>
+<head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="img/logo.png">
+    <title>Codevendor|Inhance your learning</title>
+
+    <!-- Bootstrap -->
+    <link href="component/css/bootstrap.css" rel="stylesheet">
+    <link href="component/css/mainstyle.css" rel="stylesheet">
+    <link href="component/css/font-awesome.min.css" rel="stylesheet">
+    <link href="component/css/font-awesome.css" rel="stylesheet">
+    
+<style>
+  #center {
+    width: 500px;
+    margin-left: 500px;
+   }
+    #p1
+{ 
+    font-family: "calibri";                         
+	 color: #00cccc;
+	 background:black;
+	 font-size:large;
+} 
+ </style>
+</head>
+<body style="height:1100px;">
+<div id="p1">
+</div>
+<h3 align="center" style="color: #00ff00;background:black;">Program</h3>
+ <div id="center">
+          <button type="button"style="color: #00ff00;background:black;" >try yourself</button>
+        </div>
+<pre>
+<xmp id="p1">
+//Accesibility within package:
+
+
+       package mpack;
+             class pure1{
+	               public        int a=10;
+		        // private         int b=40;            /* b has private access in  pure1 */
+		           protected      double d=567.896;
+		                           String s="shubham";
+                           }
+	  
+       public class pure{  
+	 
+          public static void main(String[] args)
+	      {
+	           pure1 a=new pure1();
+	         	System.out.println("value of a is   "+a.a);
+	      	//System.out.println("value of b is   "+a.b);
+	      	System.out.println("value of d is   "+a.d);
+	      	System.out.println("value of s is   "+a.s);
+		
+		
+	     }  
+	  }
+	  
+---------------------------------------------------------------------------------------------------------------------------------
+OUTPUT:
+value of a is   10
+value of d is   567.896
+value of s is   shubham
+
+</xmp>
+</pre>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="component/js/bootstrap.min.js"></script>
+    <script src="component/js/jquery-3.2.1.js"></script>
+    <script>
+        //   $('#myCarousel').on("slide.bs.carousel", function(){
+        //     $(".carousel-control",this).css('top',($(".active img",this).height()*0.46)+'px');
+        //     $(this).off("slide.bs.carousel");
+        //});
+    </script>
+
+
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+</body>
+</html>

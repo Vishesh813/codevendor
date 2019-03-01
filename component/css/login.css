@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+
+
+body {
+    background: url(../bg.jpg) ;
+    font-family: 'Orbitron', sans-serif;
+    width:100%; 
+      background-repeat:no-repeat; 
+}
+
+
+#loginbox {
+    position: absolute;
+    margin-left: 360px;
+    margin-top: 5%;
+    height: 350px;
+    width: 320px;
+    background-color: #1690e2;
+    border-radius: 10px;
+
+
+
+
+}
+
+#loginbox form button {
+    font-family: 'Orbitron', sans-serif;
+    height: 40px;
+    width: 100px;
+    background-color: #1133ef;
+    border-radius: 5px;
+
+}

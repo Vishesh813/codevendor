@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Codevendor &mdash; Inhance your learning</title>
+<link href="component/css/php.css" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif');
+</style>
+</head>
+<body >
+	<div class="main">
+		   <h3 align="center" valign="top">PHP opening and closing Tags syntax</h3>
+  <p> 
+ There are four different pairs of opening and closing tags which can be used in php. Here is the list of tags.
+	 </p>
+		<p>
+			<ul style="list-style-type:hand">
+				<li>Default syntax</li>
+				<li>Short open Tags</li>
+				<li>HTML Script Tags.</li>
+				<li> ASP Style Tags</li>
+
+
+	        </ul>
+	    </p>
+	 <h3>Default Syntax</h3>
+    <p>The default syntax starts with "<? php" and ends with "?>".
+	</p>
+	<h3>Example:</h3>
+	<div class="block">
+	 		   <xmp>
+	 		   	<?php
+                echo "Default Syntax";
+                ?>
+		   </xmp>
+		</div>
+			
+			<h3>Short open Tags</h3>
+			<p>The short tags starts with "<?" and ends with "?>". Short style tags are only available when they are enabled in php.ini configuration file on servers.
+			</p>
+			<h3>Example:</h3>
+			<div class="block">
+	 		   <xmp>
+	 		   	<?
+				echo "PHP example with short-tags";
+				?>
+		       </xmp>
+		    </div>
+		   <h3>HTML Script Tags</h3>
+		   <p>HTML script tags look like this :</p>
+			<div class="block">
+	 		   <xmp>
+	 		   	<script language="php">
+                echo "This is HTML script tags.";
+				</script>
+		       </xmp>
+		   </div>
+		   <p>Some editors like Front Page editor have own problem to deal with escape situation and the said script is effective to solve it.</p>
+		   <h3>ASP Style Tags</h3>
+		   <p>The ASP style tags start with "<%" and ends with "%>". ASP style tags are only available when they are enabled in php.ini configuration file on servers.</p>
+		   <h3>Example:</h3>
+			<div class="block">
+	 		   <xmp>
+	 		   	<% 
+				echo 'This is ASP like style';
+				%>
+		       </xmp>
+		   </div>
+		   <p>Note: The above two tags and examples are given only for reference, but not used in practice any more.</p>
+		   <h3>PHP Statement separation</h3>
+		   <p>In PHP, statements are terminated by a semicolon (;) like C or Perl. The closing tag of a block of PHP code automatically implies a semicolon, there is no need to have a semicolon terminating the last line of a PHP block.</p>
+		   <h3>Rules for statement separation</h3>
+		   <ul style="list-style-type:hand">
+				<li>A semicolon</li>
+				<li>AND/OR</li>
+				<li>a closing PHP tag</li>
+	       </ul>
+	       <h3>Valid Codes</h3>
+	       <div class="block">
+	 		   <xmp>
+	 		   	<?php
+				echo 'This is a test string';
+				?>
+		       </xmp>
+		   </div>
+		   <p>In the above example, there is no semicolon(;) after the last instruction but a closing PHP tag is present. 
+				<?php echo 'Here the last closing tag is omitted' ;
+				In the above example, there is a semicolon(;) in the last instruction but there is no closing PHP tag.
+			</p>
+			<h3>PHP Case sensitivity</h3>
+			<p>In PHP the user defined functions, classes, core language keywords (for example if, else, while, echo etc.) are case-insensitive. Therefore the three echo statements in the following example are equal.
+			</p>
+			<h3>Example:</h3>
+			<div class="block">
+	 		   <xmp>
+	 		   	<?php
+					echo("We are learning PHP case sensitivity <br />"); 
+					ECHO("We are learning PHP case sensitivity <br />");
+					EcHo("We are learning PHP case sensitivity <br />");
+					?>
+		       </xmp>
+		    </div>
+		    	<h4>Output:</h4>
+	 		   <pre>
+	 		   	We are learning PHP case sensitivity
+				We are learning PHP case sensitivity 
+				We are learning PHP case sensitivity 
+		       </pre>
+		       <h3>
+		       	PHP whitespace insensitivity
+		       </h3>
+		       <p>
+		       	In general, whitespace is not visible on the screen, including spaces, tabs, and end-of-line characters i.e. carriage returns. In PHP whitespace doesn't matter in coding. You can break a single line statement to any number of lines or number of separate statements together on a single line.
+		       </p>
+		</div>
+</body>
+
+</html>

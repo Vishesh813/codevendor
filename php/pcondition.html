@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Codevendor &mdash; Inhance your learning</title>
+<link href="component/css/php.css" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif');
+</style>
+</head>
+<body style="font-family: 'Noto Serif', serif;" >
+	<div class="main">
+		   <h3 align="center" valign="top">PHP Conditional Statementss</h3>
+  <p style="font-family: 'Noto Serif', serif;"> 
+ Very often when you write code, you want to perform different actions for different conditions. You can use conditional statements in your code to do this.<br>
+
+In PHP we have the following conditional statements:
+	 </p>
+	 
+	    <p>•	if statement - executes some code if one condition is true<br>
+•	if...else statement - executes some code if a condition is true and another code if that condition is false<br>
+•	if...elseif....else statement - executes different codes for more than two conditions<br>
+•	switch statement - selects one of many blocks of code to be executed
+
+</p>
+	<h3>PHP - The if Statement</h3>
+	<p>The if statement executes some code if one condition is true.</p>
+	<h4>Syntax</h4>
+	<pre>
+		
+		if (condition) {
+        code to be executed if condition is true;
+        }
+	</pre>
+	<p>The example below will output "Have a good day!" if the current time (HOUR) is less than 20:</p>
+	<h3>Example:</h3>
+	<div class="block">
+	 <xmp>
+		<?php
+		$t = date("H");
+
+		if ($t < "20") {
+		    echo "Have a good day!";
+		}
+		?>
+	 </xmp>
+	</div>
+	<h4>Output:</h4>
+	<pre>
+		Have a good day!</pre>
+			<h3>PHP - The if...else Statement</h3>
+			<p>The if....else statement executes some code if a condition is true and another code if that condition is false.</p>
+		
+				<h3>Syntax</h3>
+				<pre>
+				if (condition) {
+				    code to be executed if condition is true;
+				} else {
+				    code to be executed if condition is false;
+				}
+			</pre>
+			<h4>Example:</h4>
+			<div class="block">
+			 <xmp>
+				<?php
+					$t = date("H");
+
+					if ($t < "20") {
+					    echo "Have a good day!";
+					} else {
+					    echo "Have a good night!";
+					}
+					?>
+			 </xmp>
+			</div>
+			<h4>Output:</h4>
+			<pre>
+				Have a good day!</pre>
+				<h3>PHP - The if...elseif....else Statement</h3>
+			<p>The if....elseif...else statement executes different codes for more than two conditions:
+             </p>
+             
+             	<h3>Syntax</h3>
+             	<pre>
+             	if (condition) {
+				    code to be executed if this condition is true;
+				} elseif (condition) {
+				    code to be executed if this condition is true;
+				} else {
+				    code to be executed if all conditions are false;
+				}
+             </pre>
+             <p>
+             	The example below will output "Have a good morning!" if the current time is less than 10, and "Have a good day!" if the current time is less than 20. Otherwise it will output "Have a good night!":
+             </p>
+			
+			<h4>Example:</h4>
+			<div class="block">
+			 <xmp>
+			<?php
+			$t = date("H");
+
+			if ($t < "10") {
+			    echo "Have a good morning!";
+			} elseif ($t < "20") {
+			    echo "Have a good day!";
+			} else {
+			    echo "Have a good night!";
+			}
+			?>
+			 </xmp>
+			</div>
+			<h4>Output:</h4>
+			<pre>
+				Have a good day!</pre>
+				<h3>The PHP switch Statement</h3>
+			<p>TUse the switch statement to select one of many blocks of code to be executed.
+
+             </p>
+             <h3>Syntax</h3>
+             <pre>
+             	switch (n) {
+			    case label1:
+			        code to be executed if n=label1;
+			        break;
+			    case label2:
+			        code to be executed if n=label2;
+			        break;
+			    case label3:
+			        code to be executed if n=label3;
+			        break;
+			    ...
+			    default:
+			        code to be executed if n is different from all labels;
+			}
+             </pre>
+             <p>This is how it works: First we have a single expression n (most often a variable), that is evaluated once. The value of the expression is then compared with the values for each case in the structure. If there is a match, the block of code associated with that case is executed. Use break to prevent the code from running into the next case automatically. The default statement is used if no match is found</p>
+			
+			<h4>Example:</h4>
+			<div class="block">
+			 <xmp>
+				<?php
+				$favcolor = "red";
+
+				switch ($favcolor) {
+				    case "red":
+				        echo "Your favorite color is red!";
+				        break;
+				    case "blue":
+				        echo "Your favorite color is blue!";
+				        break;
+				    case "green":
+				        echo "Your favorite color is green!";
+				        break;
+				    default:
+				        echo "Your favorite color is neither red, blue, nor green!";
+				}
+				?>
+			 </xmp>
+			</div>
+			<h4>Output:</h4>
+			<pre>
+				Your favorite color is red!</pre>
+		
+			
+		</div>
+</body>
+
+</html>

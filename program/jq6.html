@@ -1,0 +1,134 @@
+    <html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="img/logo.png">
+    <title>Codevendor|Inhance your learning</title>
+
+    <!-- Bootstrap -->
+    <link href="component/css/bootstrap.css" rel="stylesheet">
+    <link href="component/css/mainstyle.css" rel="stylesheet">
+    <link href="component/css/font-awesome.min.css" rel="stylesheet">
+    <link href="component/css/font-awesome.css" rel="stylesheet">
+    
+<style>
+ #center {
+    width: 500px;
+    margin-left: 500px;
+   }
+    #p1
+{ 
+    font-family: "calibri";  
+	 color: #00cccc;
+	 background:black;
+	 font-size:large;
+} 
+ </style>
+</head>
+<body style="height:2000px;">
+<div id="p1">
+</div>
+<h3 align="center" style="color: #00ff00;background:black;">Program</h3>
+<div id="center">
+          <button type="button"style="color: #00ff00;background:black;" >try yourself</button>
+        </div>
+<pre>
+<xmp id="p1">
+ import java.lang.*;
+
+class Mythread1 extends Thread
+{     public void run()
+   {
+
+try{
+	Thread.sleep(2000);
+	   System.out.println("This is Thread -1 after 200ms");
+    }
+catch(InterruptedException e)
+ {}
+
+   }
+
+}
+
+  class Mythread2 extends Thread
+{     public void run()
+      {
+
+try  {
+
+	Thread.sleep(4000);
+	   System.out.println("This is Thread -2 after 400ms");
+     }
+
+catch(InterruptedException e)
+ {}
+
+     }
+
+  }
+
+  class Mythread3 extends Thread
+{     public void run()
+      {
+
+try  {
+
+	Thread.sleep(6000);
+	  System.out.println("This is Thread -3 afer 600ms");
+     }
+
+catch(InterruptedException e)
+ {}
+
+     }
+
+  }
+ public class thread
+{
+
+public static void main(String[] args) {
+	 
+	Mythread1 t1 = new Mythread1();
+	t1.start();
+
+	Mythread2 t2 = new Mythread2();
+	t2.start();
+
+	Mythread3 t3 = new Mythread3();
+	t3.start();
+
+	System.out.println("This is main class  thread");
+}
+
+}
+-------------------------------------------------------------------
+OUTPUT:
+this is main class thread
+this is thread -1 after 200ms
+this is thread -2 after 400ms
+this is thread -3 after 600ms
+</xmp>
+</pre>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="component/js/bootstrap.min.js"></script>
+    <script src="component/js/jquery-3.2.1.js"></script>
+    <script>
+        //   $('#myCarousel').on("slide.bs.carousel", function(){
+        //     $(".carousel-control",this).css('top',($(".active img",this).height()*0.46)+'px');
+        //     $(this).off("slide.bs.carousel");
+        //});
+    </script>
+
+
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+</body>
+</html>

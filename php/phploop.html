@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Codevendor &mdash; Inhance your learning</title>
+<link href="component/css/php.css" rel="stylesheet">
+<link href="component/css/php.css" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif');
+</style>
+</head>
+<body >
+	<div class="main">
+		   <h3 align="center" valign="top">PHP Loops</h3>
+  <p> 
+ Often when you write code, you want the same block of code to run over and over again in a row. Instead of adding several almost equal code-lines in a script, we can use loops to perform a task like this.<br>
+
+In PHP, we have the following looping statements:
+	 </p>
+	 
+	    <p>•	while - loops through a block of code as long as the specified condition is true<br>
+•	do...while - loops through a block of code once, and then repeats the loop as long as the specified condition is true<br>
+•	for - loops through a block of code a specified number of times<br>
+•	foreach - loops through a block of code for each element in an array
+
+
+
+</p>
+	<h3>The PHP while Loop</h3>
+	<p>The while loop executes a block of code as long as the specified condition is true.</p>
+	<h4>Syntax</h4>
+	<pre>
+		
+		while (condition is true) {
+		    code to be executed;
+		}
+	</pre>
+	<p>The example below first sets a variable $x to 1 ($x = 1). Then, the while loop will continue to run as long as $x is less than, or equal to 5 ($x <= 5). $x will increase by 1 each time the loop runs ($x++):</p>
+	<h3>Example:</h3>
+	<div class="block">
+	 <xmp>
+		<?php 
+		$x = 1; 
+
+		while($x <= 5) {
+		    echo "The number is: $x <br>";
+		    $x++;
+		} 
+		?>
+	 </xmp>
+	</div>
+	<h4>Output:</h4>
+	<pre>
+		The number is: 1 
+		The number is: 2 
+		The number is: 3 
+		The number is: 4 
+		The number is: 5 
+	</pre>
+			<h3>The PHP do...while Loop</h3>
+			<p>The do...while loop will always execute the block of code once, it will then check the condition, and repeat the loop while the specified condition is true.</p>
+		
+				<h3>Syntax</h3>
+				<pre>
+				do {
+				    code to be executed;
+				} while (condition is true);
+			</pre>
+			<p>
+				The example below first sets a variable $x to 1 ($x = 1). Then, the do while loop will write some output, and then increment the variable $x with 1. Then the condition is checked (is $x less than, or equal to 5?), and the loop will continue to run as long as $x is less than, or equal to 5:
+			</p>
+			<h4>Example:</h4>
+			<div class="block">
+			 <xmp>
+				<?php 
+				$x = 1; 
+
+				do {
+				    echo "The number is: $x <br>";
+				    $x++;
+				} while ($x <= 5);
+				?>
+			 </xmp>
+			</div>
+			<h4>Output:</h4>
+			<pre>
+				The number is: 1 
+				The number is: 2 
+				The number is: 3 
+				The number is: 4 
+				The number is: 5 
+			</pre>
+			<p>
+				Notice that in a do while loop the condition is tested AFTER executing the statements within the loop. This means that the do while loop would execute its statements at least once, even if the condition is false the first time.<br>
+
+				The example below sets the $x variable to 6, then it runs the loop, and then the condition is checked:
+			</p>
+			
+			<h4>Example:</h4>
+			<div class="block">
+			 <xmp>
+			<?php 
+			$x = 6;
+
+			do {
+			    echo "The number is: $x <br>";
+			    $x++;
+			} while ($x <= 5);
+            ?>
+			 </xmp>
+			</div>
+			<h4>Output:</h4>
+			<pre>
+				The number is: 6 
+			</pre>
+				<h3>The PHP for Loop</h3>
+			<p>The for loop is used when you know in advance how many times the script should run.
+
+             </p>
+             <h3>Syntax</h3>
+             <pre>
+             	for (init counter; test counter; increment counter) {
+ 			   code to be executed;
+				}
+             </pre>
+             <p>Parameters:<br>
+•	init counter: Initialize the loop counter value<br>
+•	test counter: Evaluated for each loop iteration. If it evaluates to TRUE, the loop continues. If it evaluates to FALSE, the loop ends.<br>
+•	increment counter: Increases the loop counter value<br>
+The example below displays the numbers from 0 to 10:
+
+</p>
+			
+			<h4>Example:</h4>
+			<div class="block">
+			 <xmp>
+				<?php 
+				for ($x = 0; $x <= 10; $x++) {
+				    echo "The number is: $x <br>";
+				} 
+				?>
+			
+			 </xmp>
+			</div>
+			<h4>Output:</h4>
+			<pre>
+				The number is: 0 
+				The number is: 1 
+				The number is: 2 
+				The number is: 3 
+				The number is: 4 
+				The number is: 5 
+				The number is: 6 
+				The number is: 7 
+				The number is: 8 
+				The number is: 9 
+				The number is: 10 
+			</pre>
+			<h3>The PHP foreach Loop</h3>
+			<p>The foreach loop works only on arrays, and is used to loop through each key/value pair in an array.
+
+             </p>
+             <h3>Syntax</h3>
+             <pre>
+             	foreach ($array as $value) {
+				 code to be executed;
+				}
+             </pre>
+             <p>For every loop iteration, the value of the current array element is assigned to $value and the array pointer is moved by one, until it reaches the last array element.<br>
+
+The following example demonstrates a loop that will output the values of the given array ($colors):
+
+</p>
+			
+			<h4>Example:</h4>
+			<div class="block">
+			 <xmp>
+				<?php 
+				$colors = array("red", "green", "blue", "yellow"); 
+
+				foreach ($colors as $value) {
+				    echo "$value <br>";
+				}
+				?>
+			 </xmp>
+			</div>
+			<h4>Output:</h4>
+			<pre>
+				red 
+				green 
+				blue 
+				yellow
+			</pre>
+		
+			
+		</div>
+</body>
+
+</html>

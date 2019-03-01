@@ -1,0 +1,106 @@
+   <html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="img/logo.png">
+    <title>Codevendor|Inhance your learning</title>
+
+    <!-- Bootstrap -->
+    <link href="component/css/bootstrap.css" rel="stylesheet">
+    <link href="component/css/mainstyle.css" rel="stylesheet">
+    <link href="component/css/font-awesome.min.css" rel="stylesheet">
+    <link href="component/css/font-awesome.css" rel="stylesheet">
+    <style>
+    <style>
+    #p1
+{ 
+       font-family: "calibri";  
+	 color: #00cccc;
+	 background:black;
+} 
+ </style>
+
+</head>
+
+</head>
+<body style="height:1300px;">
+<div id="p1">
+</div>
+<h3 align="center" style="color: #00ff00;background:black;">Program</h3>
+<pre>
+<xmp id="p1">
+import java.awt.BorderLayout;
+import java.awt.Font;
+import java.awt.GridLayout;
+
+import javax.swing.*;
+
+public class Calc2 {
+   public static final String[][] BUTTON_TEXTS = {
+      {"7", "8", "9", "+"},
+      {"4", "5", "6", "-"},
+      {"1", "2", "3", "*"},
+      {"0", ".", "/", "="}
+   };
+   public static final Font BTN_FONT = new Font(Font.SANS_SERIF, Font.BOLD, 24);
+
+   private static void createAndShowGui() {
+      JTextField field = new JTextField(10);
+      field.setFont(BTN_FONT.deriveFont(Font.PLAIN));
+      JPanel btnPanel = new JPanel(new GridLayout(BUTTON_TEXTS.length,
+            BUTTON_TEXTS[0].length));
+
+        for (int i = 0; i < BUTTON_TEXTS.length; i++) {
+         for (int j = 0; j < BUTTON_TEXTS[i].length; j++) {
+            JButton btn = new JButton(BUTTON_TEXTS[i][j]);
+            btn.setFont(BTN_FONT);
+            btnPanel.add(btn);
+         }
+      }
+
+      JPanel mainPanel = new JPanel(new BorderLayout());
+      mainPanel.add(field, BorderLayout.PAGE_START);
+      mainPanel.add(btnPanel, BorderLayout.CENTER);
+
+
+      JFrame frame = new JFrame("Calc2");
+      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      frame.getContentPane().add(mainPanel);
+      frame.pack();
+      frame.setLocationRelativeTo(null);
+      frame.setVisible(true);
+   }
+
+   public static void main(String[] args) {
+      SwingUtilities.invokeLater(new Runnable() {
+         public void run() {
+            createAndShowGui();
+         }
+      });
+   }
+}
+
+</xmp>
+</pre>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="component/js/bootstrap.min.js"></script>
+    <script src="component/js/jquery-3.2.1.js"></script>
+    <script>
+        //   $('#myCarousel').on("slide.bs.carousel", function(){
+        //     $(".carousel-control",this).css('top',($(".active img",this).height()*0.46)+'px');
+        //     $(this).off("slide.bs.carousel");
+        //});
+    </script>
+
+
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+</body>
+</html>
